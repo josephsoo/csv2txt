@@ -3,7 +3,6 @@ import os
 # Specify the root directory path
 root_directory = "/Users/josephsoo/Documents/Test"
 
-
 # Recursive function to rename files
 def rename_files(directory):
     # Get the list of files in the directory
@@ -18,8 +17,8 @@ def rename_files(directory):
         if os.path.isfile(current_path):
             # Check if the file ends with ".csv"
             if file.endswith(".csv"):
-                # Generate the new file name by replacing the extension with ".txt"
-                new_name = file[:-4] + ".txt"
+                # Generate the new file name with ".txt" extension
+                new_name = os.path.splitext(file)[0] + ".txt"
                 
                 # Construct the new file path
                 new_path = os.path.join(directory, new_name)
