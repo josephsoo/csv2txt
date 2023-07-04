@@ -1,7 +1,7 @@
 import os
 
 # Specify the root directory path
-root_directory = "/Users/josephsoo/Documents/Test"
+root_directory = os.environ['DATASET']
 
 # Recursive function to rename files
 def rename_files(directory):
