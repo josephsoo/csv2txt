@@ -34,6 +34,8 @@ def rename_files(directory):
             rename_files(current_path)
 
 # Call the function with the root directory
-rename_files(root_directory)
+if __name__ == "__main__":
+    rename_files(root_directory)
+    print("File renaming completed!")
 
-print("File renaming completed!")
+
